@@ -45,7 +45,7 @@ export class AuthController {
         @Res({ passthrough: true }) res: Response,
     ) {
         const { refreshToken, ...response } =
-            await this.authService.register(dto)
+            await this.authService.registration(dto)
         this.authService.addRefreshTokenToResponse(res, refreshToken)
         return response
     }
