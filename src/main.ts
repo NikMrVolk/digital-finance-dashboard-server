@@ -10,7 +10,10 @@ const start = async () => {
         app.setGlobalPrefix('api')
         app.use(cookieParser())
         app.enableCors({
-            origin: ['http://localhost:3000'],
+            origin: [
+                'http://localhost:3000',
+                'https://digital-finance-dashboard-72wsp0tyu-nikmrvolks-projects.vercel.app/',
+            ],
             credentials: true,
             // exposedHeaders: 'set-cookie',
         })
